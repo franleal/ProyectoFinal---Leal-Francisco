@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedorIndex">
+        <h1>FL-Computacion</h1>
+        
+        <div class="container-container">
+
+            <div class="productosContainer">
+                <h2 class="textProductos">Nuestros Productos</h2>
+                <button id="boton" class="boton">Monitores</button>
+                <button id="boton2" class="boton">Placas de video</button>
+                <button id="boton3" class="boton">Procesadores</button>
+                
+            </div>
+
+            <div class="pagosContainer">
+                <h2 class="textPagos">Metodos de pagos</h2>
+                <button id="boton4" class="botonPago">Metodos de pago</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="mostrar" >
+
+    </div>
+
+    <div id="pagos" class="pagos"> 
+
+        <div id="mostrarPagos">
+
+        </div>
+
+        <select name="pagos" id="drop" class="drop">
+            <option value="visa">visa</option>
+            <option value="mastercard">mastercard</option>
+            <option value="efectivo">efectivo o transferencia</option>
+        </select>
+
+    </div>
+
+
+    <div class="contenedorInicio">
+        <h2>Inicie secion para comprar o ver sus compras</h2>
+        <form clas="formulario">
+            <div class="formulario__div">
+                <input type="email" name="email" required  placeholder="Ingrese su Email"class="formulario__input" id="mail"> 
+            </div>
+
+            <div class="formulario__div">
+                <input type="password" name="contraseña" required  placeholder="Ingrese su Contraseña"class="formulario__input" id="clave"> 
+            </div>
+        </form>
+
+        <div class="mensaje" id="mensaje">
+            
+        </div>
+        
+        <input type="submit" value="Registrarse" class="boton" id="registrar">
+        <input type="submit" value="Ingresar" class="boton" id="ingresar">
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
