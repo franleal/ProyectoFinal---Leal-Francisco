@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="./estilos.css">
     <title>Document</title>
 </head>
@@ -48,9 +50,36 @@
             <option value="efectivo">efectivo o transferencia</option>
         </select>
 
+        <div id="visa" class="visa">
+
+            <h2>seleccione su metodo de pago</h2>
+            <button id="boton12V" class="botonV">12 Cuotas sin interes</button>
+            <button id="boton6V" class="botonV">6 Cuotas sin interes</button>
+            <button id="boton3V" class="botonV">3 Cuotas sin interes</button>
+            <button id="botonEv" class="botonV">Un pago</button>
+
+        </div>
+
+        <div id="mastercard" class="mastercard">
+            
+            <h2>seleccione su metodo de pago</h2>
+            <button id="boton12M" class="botonV">12 Cuotas 20% de interes</button>
+            <button id="boton6M" class="botonV">6 Cuotas sin interes</button>
+            <button id="boton3M" class="botonV">3 Cuotas sin interes</button>
+            <button id="botonEm" class="botonV">Un pago</button>
+
+        </div>
+
+        <div id="efectivo" class="efectivo">
+            
+            <h2>seleccione su metodo de pago</h2>
+            <button id="botonEfectivo" class="botonE">Un pago 20% descuento</button>
+
+        </div>
+
     </div>
 
-
+<!------------------------------------ inicio de sesion-------------------------->
     <div class="contenedorInicio">
         <h2>Inicie secion para comprar o ver sus compras</h2>
         <form clas="formulario">
@@ -70,6 +99,10 @@
         <input type="submit" value="Registrarse" class="boton" id="registrar">
         <input type="submit" value="Ingresar" class="boton" id="ingresar">
     </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="./main.js"></script>
 </body>

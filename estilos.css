@@ -49,14 +49,13 @@ p{
 }
 
 .pagos{
-    display: flex;
+    display: none;
     flex-direction: row;
     margin: auto;
     margin-top: 30px ;
     width: 80%;
     min-height: 150px;
     background-color: rgb(247, 124, 36);
-    
 }
 
 .botonPago{
@@ -68,12 +67,42 @@ p{
 
 .drop{
     margin: 20px;
-    width: 300px;
+    width: 200px;
     height: 30px;
-    margin-left: 300px;
+    margin-right: 300px;
+    
 
 }
 
+.mastercard{
+    display: none;
+    flex-direction: column;
+}
+
+.botonM{
+    padding: 15px;
+    margin: 5px;
+}
+
+.visa{
+    display: none;
+    flex-direction: column;
+}
+
+.botonV{
+    padding: 15px;
+    margin: 5px;
+}
+
+.efectivo{
+    display: none;
+    flex-direction: column;
+}
+
+.botonE{
+    padding: 15px;
+    margin: 5px;
+}
 /*--------------Inicio secion--------------*/
 .contenedorInicio{
     display: block;
