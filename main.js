@@ -1,15 +1,15 @@
 //-------------------PAGINA PRINCIPAL-------------------------------------
 
 //.===========================productos===========================
-let Productos = [{id: 1,tipo: "Placa de video" , nombre: "Nvidia - Rtx 3060",cantidad: 1,precio: 85000,img: './imagenes/3060.jpg'},
-{id: 2,tipo: "Placa de video" , nombre: "Nvidia - Rtx 2060 ",cantidad: 1,precio: 70000, img: './imagenes/2060.jpg'},
+let Productos = [{id: 1,tipo: "Placa de video" , nombre: "Nvidia - Rtx 3060",cantidad: 1,precio: 85000,img: './imagenes/3060.png'},
+{id: 2,tipo: "Placa de video" , nombre: "Nvidia - Rtx 2060 ",cantidad: 1,precio: 70000, img: './imagenes/2060.png'},
 {id: 3,tipo: "Placa de video" , nombre: "Nvidia - Rtx 2060 Super",cantidad: 1,precio: 80000,img: './imagenes/2060super.png'},
-{id: 4,tipo: "Monitor" , nombre: "Gigabyte - 24 pulgadas",cantidad: 1,precio: 60000,img: './imagenes/gb24.jpeg'},
-{id: 5,tipo: "Monitor" , nombre: "MSI - 24 pulgadas",cantidad: 1,precio: 90000,img: './imagenes/msi24.jpg'},
-{id: 6,tipo: "Monitor" , nombre: "Samsung - 49 pulgadas curvo",cantidad: 1,precio: 300000,img: './imagenes/smscurvo.jpeg'},
-{id: 7,tipo: "Procesador" , nombre: "Ryzen 7 - 3700x",cantidad: 1,precio: 150000,img: './imagenes/r73700.jpg'},
-{id: 8,tipo: "Procesador" , nombre: "Intel I7 - 8700",cantidad: 1,precio: 160000,img: './imagenes/intel7.jpg'},
-{id: 9,tipo: "Procesador" , nombre: "Ryzen 5 - 1600",cantidad: 1,precio: 30000,img: './imagenes/1600amd.jpg'}];
+{id: 4,tipo: "Monitor" , nombre: "Gigabyte - 24 pulgadas",cantidad: 1,precio: 60000,img: './imagenes/gb24.png'},
+{id: 5,tipo: "Monitor" , nombre: "MSI - 24 pulgadas",cantidad: 1,precio: 90000,img: './imagenes/msi24.png'},
+{id: 6,tipo: "Monitor" , nombre: "Samsung - 49 pulgadas curvo",cantidad: 1,precio: 300000,img: './imagenes/smscurvo.png'},
+{id: 7,tipo: "Procesador" , nombre: "Ryzen 7 - 3700x",cantidad: 1,precio: 150000,img: './imagenes/r73700.png'},
+{id: 8,tipo: "Procesador" , nombre: "Intel I7 - 8700",cantidad: 1,precio: 160000,img: './imagenes/intel7.png'},
+{id: 9,tipo: "Procesador" , nombre: "Ryzen 5 - 1600",cantidad: 1,precio: 30000,img: './imagenes/1600amd.png'}];
 
 const mostrar = document.getElementById("mostrar");
 
@@ -22,27 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
         ActualizarCarrito();
     }
 })
+document.getElementById("boton5").addEventListener ("click", () => {
 
-Productos.forEach((producto) => {
-    const div = document.createElement("div");
-    div.classList.add("mostrar");
-    div.innerHTML= `
-    <h2>${producto.tipo}</h2>
-    <h2>${producto.nombre}</h2>
-    <p class"precioProducto"> Precio:$ ${producto.precio}</p>
-    <button id="agregar${producto.id}" class="botonCarrito">Agregar al carrito</button>
-    <img src=${producto.img} alt= "" class= "img">
-    `
-    mostrar.appendChild(div);
-    
+    Productos.forEach((producto) => {
+        const div = document.createElement("div");
+        div.classList.add("mostrar");
+        div.innerHTML= `
+        <h2>${producto.tipo}</h2>
+        <h2 class="Nombre">${producto.nombre}</h2>
+        <p class"precioProducto"> Precio:$ ${producto.precio}</p>
+        <button id="agregar${producto.id}" class="botonCarrito">Agregar al carrito</button>
+        <img src=${producto.img} alt= "" class= "img">
+        `
+        mostrar.appendChild(div);
+        
 
-    const boton = document.getElementById(`agregar${producto.id}`);
+        const boton = document.getElementById(`agregar${producto.id}`);
 
-    boton.addEventListener ("click", () => {
-        agregarCarrito(producto.id);
+        boton.addEventListener ("click", () => {
+            agregarCarrito(producto.id);
+        })
     })
 })
-
 //.===========================Agregar al carrito ==================================
 const agregarCarrito = (prodId) => {
 
@@ -501,63 +502,3 @@ botonEfectivo.onclick = () => {
 }
 
 
-
-// //--------------------INICIO DE SESION-------------------------------------
-// document.getElementById("registrar").addEventListener("click",function(){
-//     let clave = document.getElementById("clave").value;
-//     let mail = document.getElementById("mail").value;
-
-//     if (clave == "" || mail == "" ){
-//         document.getElementById("mensaje").innerText = "la clave o su Email estan vacios";
-//     }else{
-//         if(localStorage.getItem(mail)){
-//             document.getElementById("mensaje").innerText = "Usted ya esta registrado, inicie sesion";
-//         }else{
-//             localStorage.setItem(mail,clave)
-//             document.getElementById("mensaje").innerText = "Sus datos se registraron correctamente";
-//         }
-        
-//     }
-// })
-
-// document.getElementById("ingresar").addEventListener("click",function(){
-//     let clave = document.getElementById("clave").value;
-//     let mail = document.getElementById("mail").value;
-
-//     if (clave == "" || mail == "" ){
-//         document.getElementById("mensaje").innerText = "la clave o su Email estan vacios";
-//     }else{
-//         if(localStorage.getItem(mail) ){
-//             document.getElementById("mensaje").innerText = "inicio de sesion correcto, Bienvenido";
-//             localStorage.setItem(mail,clave)
-//         }else{
-//             document.getElementById("mensaje").innerText = "Su Email es incorrecto, ingrese nuevamente";
-//         }
-
-//     }
-// })
-
-//--------------------TODOS LOS PRODUCTOS-------------------------------------
-
-document.getElementById("boton5").addEventListener("click",function(){
-    const lista = document.querySelector('#listado')
-
-    fetch('/data.json')
-        .then( (res) => res.json())
-        .then( (data) => {
-
-            data.forEach((producto) => {
-                const li = document.createElement('li')
-                li.innerHTML = `
-                    <h4>${producto.nombre}</h4>
-                    <p>${producto.precio}</p>
-                    <p>Código: ${producto.id}</p>
-                    <hr/>
-                `
-   
-            lista.append(li)
-        })
-    })
-
-    
-})

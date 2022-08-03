@@ -1,20 +1,32 @@
 /*--------------pagina--------------*/
 body{
-    background-color: rgb(3, 41, 3);
+    background-color: rgb(37, 36, 36);
 }
 .boton{
    margin: 50px;
    min-width: 150px;
    height: 50px;
+   border: 0;
+}
+
+.boton:hover{
+    background-color:rgb(102, 240, 233);
+    box-shadow: 0 0 10px rgb(102, 240, 233), 0 0 20px rgb(102, 240, 233), 0 0 20px rgb(102, 240, 233); 
+    transition: all 350ms;
 }
 
 h1{
     font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
+h2{
+    font-family: 'Abel', sans-serif;
 }
 .textPagos{
     font-size: 25px;
     padding: 15px;
-    margin-left: 250px;
+    margin-left: 750px;
 }
 .textProductos{
     font-size: 25px;
@@ -29,12 +41,12 @@ h1{
     margin: auto;
     width: 80%;
     min-height: 150px;
-    background-color: rgb(243, 159, 99);
     text-align: center;
+    background: linear-gradient(to top,rgb(255, 207, 162), rgb(255, 158, 47));
 }
 
 .mostrar{
-    background-color: rgb(248, 138, 60);
+    background-color: rgb(158, 88, 88);
     width: 80%;
     padding: 10px;
     margin: auto;
@@ -45,10 +57,14 @@ h1{
     margin: 10px;
     width: 150px;
     height: 50px; 
-    background-color: rgb(215, 255, 215);
     color: black;
     font-size: 15px;
+}
 
+.botonCarrito:hover{
+    background-color: rgb(80, 255, 173);;
+    box-shadow: 0 0 10px rgb(101, 255, 191), 0 0 20px rgb(101, 255, 191), 0 0 20px rgb(101, 255, 191); 
+    transition: all 350ms;
 }
 .img{
     width: 400px;
@@ -60,6 +76,7 @@ p{
     font-size: 20px;
     text-align: start;
     margin: 10px;
+    font-family: 'Abel', sans-serif;
    
 }
 
@@ -70,14 +87,21 @@ p{
     margin-top: 30px ;
     width: 80%;
     min-height: 150px;
-    background-color: rgb(247, 124, 36);
+    background-color: rgb(206, 141, 79);
 }
 
 .botonPago{
     margin: 50px;
-    margin-left: 300px;
+    margin-left: 800px;
     min-width: 150px;
     height: 50px;
+    border: 0;
+}
+
+.botonPago:hover{
+    background-color:rgb(102, 240, 233);
+    box-shadow: 0 0 10px rgb(102, 240, 233), 0 0 20px rgb(102, 240, 233), 0 0 20px rgb(102, 240, 233); 
+    transition: all 350ms;
 }
 
 .drop{
@@ -94,11 +118,6 @@ p{
     flex-direction: column;
 }
 
-.botonM{
-    padding: 15px;
-    margin: 5px;
-}
-
 .visa{
     display: none;
     flex-direction: column;
@@ -107,6 +126,14 @@ p{
 .botonV{
     padding: 15px;
     margin: 5px;
+    border: 0;
+}
+
+.botonV:hover{
+    background-color: rgb(255, 223, 175);
+    box-shadow: 0 0 10px rgb(255, 146, 5), 0 0 20px rgb(255, 146, 5), 0 0 20px rgb(255, 146, 5); 
+    transition: all 350ms;
+    border: solid 2px;
 }
 
 .efectivo{
@@ -119,6 +146,13 @@ p{
     margin: 5px;
 }
 
+.botonE:hover{
+    background-color: rgb(255, 223, 175);
+    box-shadow: 0 0 10px rgb(255, 146, 5), 0 0 20px rgb(255, 146, 5), 0 0 20px rgb(255, 146, 5); 
+    transition: all 350ms;
+    border: solid 2px;
+}
+
 .listado{
     margin: auto;
     margin-top: 30px ;
@@ -129,33 +163,7 @@ p{
     font-size: 20px;
     padding: 10px;
 }
-
-.placasDeVideo{
-    display: flex;
-    flex-direction: row;
-    min-width: 100px;
-}
-.Procesadores{
-    display: flex;
-    flex-direction: row;
-    min-width: 100px;
-}
-.Monitores{
-    display: flex;
-    flex-direction: row;
-    min-width: 100px;
-}
-
-.placasContainer{
-    display: none;
-}
-.monitoresContainer{
-    display: none;
-}
-.procesadorContainer{
-    display: none;
-
-}   
+  
 .MostrarCarritoContenedor{
     display: none;
     background-color: rgb(240, 192, 130);
@@ -167,26 +175,52 @@ p{
 .botoncerrar{
     width: 100px;
     background-color: rgb(255, 119, 119);
+    border: 0;
+}
+
+.botoncerrar:hover{
+    box-shadow: 0 0 10px rgb(255, 119, 119), 0 0 20px rgb(255, 119, 119), 0 0 20px rgb(255, 119, 119); 
+    border: solid 2px;
+    width: 200px;
+    transition: all 500ms;
 }
 
 .botonComprar{
-    width: 100px;
-    background-color: rgb(137, 255, 147);
+    width: 150px;
+    background-color: rgb(255, 167, 52);
+    border: 0;
 }
+
+.botonComprar:hover{
+    box-shadow: 0 0 10px rgb(255, 167, 52), 0 0 20px rgb(255, 167, 52), 0 0 20px rgb(255, 167, 52); 
+    border: solid 2px;
+    width: 200px;
+    transition: all 500ms;
+}
+
 .Pagar{
     width: 100px;
     background-color: rgb(70, 156, 78);
+    border: 0;
+}
+
+.Pagar:hover{
+    box-shadow: 0 0 10px rgb(70, 156, 78), 0 0 20px rgb(70, 156, 78), 0 0 20px rgb(70, 156, 78); 
+    border: solid 2px;
+    width: 200px;
+    transition: all 500ms;
 }
 
 .MostrarCarritoInfo{
     display: flex;
     flex-wrap: wrap;
-    
     text-align: start;
 }
+
 .precioProducto{
     padding: 10px;
 }
+
 .botonEliminar{
     width: 30px;
     height: 30px;
@@ -194,7 +228,14 @@ p{
     text-align: center;
     margin-top: 10px;
     margin-right: 300px;
+    background-color: rgb(255, 96, 96);
 }
+
+.botonEliminar:hover{
+    box-shadow: 0 0 10px rgb(255, 96, 96), 0 0 20px rgb(255, 96, 96), 0 0 20px rgb(255, 96, 96); 
+    transition: all 500ms;
+}
+
 .compra{
     display: block;
     background-color: rgb(240, 192, 130);
@@ -204,6 +245,7 @@ p{
     margin-top: 0;
     text-align: center;
 }
+
 .contenedorCompra{
     display: block;
     background-color: rgb(240, 192, 130);
@@ -214,38 +256,21 @@ p{
     text-align: center;
 }
 
-/*--------------Inicio secion--------------*/
-.contenedorInicio{
-    display: block;
-    margin: auto;
-    margin-top: 50px;
-    background-color: rgb(228, 164, 81);
-    height: 500px;
-    width: 80%;
-    text-align: center;
+.filtro{
+    display: none;
 }
 
-h2{
-    font-size: 25px;
-    padding: 15px;
+.titulo{
+    position: relative;
+    top: 20px;
+    left: 30px;
 }
 
-.mensaje{
-    padding-bottom: 20px;
-    text-align: center;
+.Buscador{
+    position: relative;
+    bottom: 80px;
+    left: 1150px;
+    width: 300px;
+    height: 25px;
 }
 
-.formulario{
-    background-color: rgb(222, 247, 247);
-}
-.formulario__div{
-    padding: 30px;
-}
-.formulario__input{
-    font-size: 15px;
-    width: 500px;
-}
-.boton{
-    width: 100px;
-    height: 50px;
-}
